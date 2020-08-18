@@ -1,3 +1,4 @@
+import { Episodes } from './../../interfaces/episodes';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
@@ -8,6 +9,16 @@ import { FormBuilder } from '@angular/forms';
 })
 export class AddEpisodesComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
-
-  ngOnInit(): void {}
+  episodeForm: any;
+  ngOnInit(): void {
+    this.episodeForm = this.fb.group({
+      name: [''],
+      date: [''],
+      topic: [''],
+      duration: [''],
+      guests: [''],
+      soundCloud: [''],
+      instagram: [''],
+    });
+  }
 }
