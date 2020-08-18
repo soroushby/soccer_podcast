@@ -7,6 +7,7 @@ import { AddEpisodesComponent } from './add-episodes/add-episodes.component';
 import { LoadEpisodesComponent } from './load-episodes/load-episodes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MaterialModule } from '../modules/material/material.module';
     EpisodesRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
+    FlexLayoutModule,
   ],
 })
 export class EpisodesModule {}

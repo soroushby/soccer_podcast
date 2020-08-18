@@ -1,0 +1,51 @@
+<div class="form">
+  <form [formGroup]="episodeForm">
+    <div class="form-wraper" fxLayout="column">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Enter your name" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Topic</mat-label>
+        <input
+          matInput
+          formControlName="topic"
+          placeholder="Enter your Topic"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Duration</mat-label>
+        <input
+          matInput
+          formControlName="duration"
+          placeholder="Enter episode duration"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Guests</mat-label>
+        <input
+          matInput
+          formControlName="guests"
+          placeholder="Enter your Guests"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Sound cloud</mat-label>
+        <input
+          matInput
+          formControlName="soundCloud"
+          placeholder="Enter your sound cloud link"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Instagram</mat-label>
+        <input
+          matInput
+          formControlName="instagram"
+          placeholder="Enter your Instagram link"
+        />
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+{{ episodeForm.value | json }}
