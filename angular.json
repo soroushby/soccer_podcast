@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "soccerPodcast"
+    }
+  },
+  "defaultProject": "soccerPodcast",
+  "cli": {
+    "analytics": "70cd22ed-6ad4-4c9c-b0c9-6c5fb7245f00"
+  }
 }
