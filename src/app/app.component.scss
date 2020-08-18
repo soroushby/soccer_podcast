@@ -3,3 +3,16 @@ mat-sidenav,
 mat-sidenav-content {
   height: 100%;
 }
+
+.nav {
+  &-list {
+    &__item {
+      list-style: none;
+      font-size: 2rem;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

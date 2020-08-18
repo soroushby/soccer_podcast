@@ -10,6 +10,17 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
+      <div class="nav">
+        <ul class="nav-list" fxLayout="row" fxLayoutGap="2rem">
+          <li class="nav-list__item"><a routerLink="Home">Home</a></li>
+          <li class="nav-list__item">
+            <a routerLink="episodes/addepisodes">Add episode</a>
+          </li>
+          <li class="nav-list__item">
+            <a routerLink="episodes/loadepisodes">Load episodes</a>
+          </li>
+        </ul>
+      </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

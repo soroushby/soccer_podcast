@@ -5,13 +5,14 @@ import { EpisodesRoutingModule } from './episodes-routing.module';
 import { EpisodesComponent } from './episodes.component';
 import { AddEpisodesComponent } from './add-episodes/add-episodes.component';
 import { LoadEpisodesComponent } from './load-episodes/load-episodes.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [EpisodesComponent, AddEpisodesComponent, LoadEpisodesComponent],
-  imports: [
-    CommonModule,
-    EpisodesRoutingModule
-  ]
+  declarations: [
+    EpisodesComponent,
+    AddEpisodesComponent,
+    LoadEpisodesComponent,
+  ],
+  imports: [CommonModule, EpisodesRoutingModule, ReactiveFormsModule],
 })
-export class EpisodesModule { }
+export class EpisodesModule {}
