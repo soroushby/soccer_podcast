@@ -1,7 +1,40 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" #sidenav>Sidenav content</mat-sidenav>
+  <mat-sidenav class="sidenav" #sidenav>
+    <mat-nav-list
+      role="list"
+      fxLayoutAlign="center center"
+      fxLayout="column"
+      fxLayoutAlign="center end"
+    >
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/welcome"
+        (click)="sidenav.close()"
+        class="matlist"
+        >Home</mat-list-item
+      >
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="episodes/addepisodes"
+        (click)="sidenav.close()"
+        class="matlist"
+        >Add Episode</mat-list-item
+      >
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="episodes/loadepisodes"
+        (click)="sidenav.close()"
+        class="matlist"
+        >Load Episode</mat-list-item
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar class="res" color="primary">
       <button
         (click)="sidenav.toggle()"
         mat-icon-button
@@ -14,10 +47,10 @@
         <ul class="nav-list" fxLayout="row" fxLayoutGap="2rem">
           <li class="nav-list__item"><a routerLink="Home">Home</a></li>
           <li class="nav-list__item">
-            <a routerLink="episodes/addepisodes">Add episode</a>
+            <a routerLink="episodes/addepisodes">Add Episode</a>
           </li>
           <li class="nav-list__item">
-            <a routerLink="episodes/loadepisodes">Load episodes</a>
+            <a routerLink="episodes/loadepisodes">Load Episodes</a>
           </li>
         </ul>
       </div>

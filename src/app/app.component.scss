@@ -16,3 +16,14 @@ mat-sidenav-content {
     }
   }
 }
+
+.res {
+  position: absolute;
+  background-color: transparent;
+  z-index: 20;
+}
+
+.sidenav {
+  width: 20rem;
+  background: rgba(245, 245, 245, 0.753);
+}

@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'welcome', component: WelcomeComponent },
+
   {
     path: 'episodes',
     loadChildren: () =>
