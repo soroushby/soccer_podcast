@@ -13,6 +13,10 @@ mat-sidenav-content {
         color: white;
         text-decoration: none;
       }
+
+      a:hover {
+        color: rgba(46, 235, 46, 0.938);
+      }
     }
   }
 }
@@ -26,4 +30,8 @@ mat-sidenav-content {
 .sidenav {
   width: 20rem;
   background: rgba(245, 245, 245, 0.753);
+}
+
+.active {
+  text-decoration: underline white !important;
 }

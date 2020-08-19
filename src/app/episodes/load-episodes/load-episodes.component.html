@@ -4,110 +4,79 @@
   </div>
 </div> -->
 
-<div class="main2">
-  <mat-grid-list cols="2" rowHeight="1:1" gutterSize="5rem" fxHide.lt-md>
-    <mat-grid-tile>
-      <mat-card
-        class="main2-card"
-        fxLayoutAlign="start center"
-        fxLayout="column"
-        fxLayoutGap="1rem"
-      >
-        <mat-card-header fxLayoutAlign="center center">
-          <mat-card-title>topic</mat-card-title>
-          <mat-card-subtitle>name</mat-card-subtitle>
-        </mat-card-header>
-        <!-- <img
+<div
+  class="main2"
+  fxLayout="row wrap"
+  fxLayoutAlign="space-evenly center"
+  *ngIf="episodesData$ | async as episodesDatas"
+>
+  <mat-card
+    class="main2-card"
+    fxLayoutAlign="start center"
+    fxLayout="column"
+    fxLayoutGap="1rem"
+    *ngFor="let episode of episodesDatas"
+  >
+    <mat-card-header fxLayoutAlign="center center">
+      <mat-card-title>{{ episode.topic }}</mat-card-title>
+      <mat-card-subtitle>{{ episode.name }}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img
           src="../../assets/computer-line.svg"
           alt="computer icon"
           class="main2-icon"
         /> -->
 
-        <mat-card-content class="main2-card__content">
-          Guests SoundCloud Date
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
+    <mat-card-content
+      class="main2-card__content"
+      fxLayout="column"
+      fxLayoutGap="1rem"
+    >
+      <iframe
+        width="320"
+        height="440"
+        src="https://www.instagram.com/tv/CEBR7j2BVVF/embed"
+        frameborder="0"
+      ></iframe>
 
-    <mat-grid-tile>
-      <mat-card
-        class="main2-card"
-        fxLayoutAlign="start center "
-        fxLayoutGap="1rem"
-        fxLayout="column"
+      <div>{{ episode.guests }}</div>
+      <a href="{{ episode.soundCloud }}">Listen on Sound cloud</a>
+      <!-- <iframe
+        width="320"
+        height="440"
+        [src]="episode.instagram"
+        frameborder="0"
+      ></iframe> -->
+      <button
+        class="submit-button"
+        color="warn"
+        mat-raised-button
+        (click)="onDeleteEpisodes(episode.id)"
       >
-        <mat-card-header>
-          <mat-card-title fxLayoutAlign="center center ">topic</mat-card-title>
-          <mat-card-subtitle>name</mat-card-subtitle>
-        </mat-card-header>
-        <!-- <img
-          src="../../assets/shopping-cart-2-line.svg"
-          alt="computer icon"
-          class="main2-icon"
-        /> -->
-        <mat-card-content
-          fxLayoutAlign="center center"
-          class="main2-card__content"
-        >
-          Guests SoundCloud Date
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+        delete
+      </button>
+    </mat-card-content>
+  </mat-card>
 
-  <mat-grid-list cols="1" rowHeight="1:1.6" fxHide.gt-md fxHide.md>
-    <mat-grid-tile>
-      <mat-card
-        class="main2-card"
-        fxLayoutAlign="start center"
-        fxLayout="column"
-        fxLayoutGap="1rem"
-      >
-        <mat-card-header fxLayoutAlign="center center">
-          <mat-card-title>Web Design & Development</mat-card-title>
-          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-        </mat-card-header>
-        <!-- <img
+  <!-- <mat-card
+    class="main2-card"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+    fxLayoutGap="1rem"
+  >
+    <mat-card-header fxLayoutAlign="center center">
+      <mat-card-title>topic</mat-card-title>
+      <mat-card-subtitle>name</mat-card-subtitle>
+    </mat-card-header>
+    <img
           src="../../assets/computer-line.svg"
           alt="computer icon"
           class="main2-icon"
-        /> -->
+        />
 
-        <mat-card-content>
-          <p>
-            Our global team, paired with our methods & scale, work with you to
-            manage, evolve, and continuously modernize your Website.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card
-        class="main2-card"
-        fxLayoutAlign="start center "
-        fxLayoutGap="1rem"
-        fxLayout="column"
-      >
-        <mat-card-header>
-          <mat-card-title fxLayoutAlign="center center "
-            >E-Commerce Solutions</mat-card-title
-          >
-          <mat-card-subtitle>DELIVER MORE TO YOUR CUSTOMERS</mat-card-subtitle>
-        </mat-card-header>
-        <!-- <img
-          src="../../assets/shopping-cart-2-line.svg"
-          alt="computer icon"
-          class="main2-icon"
-        /> -->
-        <mat-card-content>
-          <p>
-            We specialize in building eCommerce websites that drive more sales
-            by providing customers with a seamless, omni-channel shopping
-            experience.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    <mat-card-content>
+      Guests SoundCloud Date
+    </mat-card-content>
+  </mat-card>
+</div> -->
 </div>

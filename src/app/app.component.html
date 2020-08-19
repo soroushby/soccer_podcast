@@ -43,14 +43,20 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <div class="nav">
+      <div class="nav" fxHide.lt-md>
         <ul class="nav-list" fxLayout="row" fxLayoutGap="2rem">
-          <li class="nav-list__item"><a routerLink="Home">Home</a></li>
           <li class="nav-list__item">
-            <a routerLink="episodes/addepisodes">Add Episode</a>
+            <a routerLink="Home" routerLinkActive="active">Home</a>
           </li>
           <li class="nav-list__item">
-            <a routerLink="episodes/loadepisodes">Load Episodes</a>
+            <a routerLink="episodes/addepisodes" routerLinkActive="active"
+              >Add Episode</a
+            >
+          </li>
+          <li class="nav-list__item">
+            <a routerLink="episodes/loadepisodes" routerLinkActive="active"
+              >Load Episodes</a
+            >
           </li>
         </ul>
       </div>

@@ -4,14 +4,15 @@
   // background-repeat: no-repeat;
 
   // background-size: cover;
-  background-color: rgb(132, 132, 255);
+  background-color: black;
   min-height: 100vh;
 
   &-card {
-    width: 50%;
-    height: 60%;
+    width: 60rem;
+    min-height: 40rem;
+    margin-top: 10rem;
 
-    background-color: #f7f7f7c5;
+    background-color: #f7f7f7;
 
     transition: all 0.5s;
     // background-image: linear-gradient(
@@ -25,7 +26,7 @@
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.02);
     }
     &__content {
       font-size: 2rem;
