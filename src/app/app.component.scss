@@ -29,9 +29,13 @@ mat-sidenav-content {
 
 .sidenav {
   width: 20rem;
-  background: rgba(245, 245, 245, 0.753);
+  background: rgba(26, 202, 79, 0.623);
 }
 
 .active {
   text-decoration: underline white !important;
+}
+
+.matlist {
+  color: white;
 }

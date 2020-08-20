@@ -1,10 +1,9 @@
 .main2 {
-  // background-image: linear-gradient(rgba(7, 6, 44, 0.7), rgba(7, 6, 44, 0.7)),
-  //   url(../../assets/christopher-gower-m_HRfLhgABo-unsplash.jpg);
-  // background-repeat: no-repeat;
+  background-image: url(C:\Users\User\Desktop\podcasts\soccerPodcast\src\assets\omar-flores-lQT_bOWtysE-unsplash.jpg);
+  background-repeat: no-repeat;
 
-  // background-size: cover;
-  background-color: black;
+  background-size: cover;
+
   min-height: 100vh;
 
   &-card {
@@ -12,7 +11,7 @@
     min-height: 40rem;
     margin-top: 10rem;
 
-    background-color: #f7f7f7;
+    background-color: #f7f7f7e8;
 
     transition: all 0.5s;
     // background-image: linear-gradient(
