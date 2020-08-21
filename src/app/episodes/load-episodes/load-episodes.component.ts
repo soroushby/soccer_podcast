@@ -15,8 +15,4 @@ export class LoadEpisodesComponent implements OnInit {
   ngOnInit(): void {
     this.episodesData$ = this.dataService.getEpisodes();
   }
-
-  onDeleteEpisodes(id) {
-    return this.dataService.deleteEpisodes(id);
-  }
 }

@@ -8,12 +8,14 @@ import { LoadEpisodesComponent } from './load-episodes/load-episodes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { EpisodeContentComponent } from './episode-content/episode-content.component';
 
 @NgModule({
   declarations: [
     EpisodesComponent,
     AddEpisodesComponent,
     LoadEpisodesComponent,
+    EpisodeContentComponent,
   ],
   imports: [
     CommonModule,

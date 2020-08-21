@@ -10,24 +10,28 @@
   fxLayoutAlign="space-evenly center"
   *ngIf="episodesData$ | async as episodesDatas"
 >
-  <mat-card
+  <ng-container *ngFor="let episode of episodesDatas">
+    <app-episode-content [episode]="episode"></app-episode-content>
+  </ng-container>
+
+  <!-- <mat-card
     class="main2-card"
     fxLayoutAlign="start center"
     fxLayout="column"
     fxLayoutGap="1rem"
-    *ngFor="let episode of episodesDatas"
+
   >
     <mat-card-header fxLayoutAlign="center center">
       <mat-card-title>{{ episode.topic }}</mat-card-title>
       <mat-card-subtitle>{{ episode.name }}</mat-card-subtitle>
-    </mat-card-header>
-    <!-- <img
+    </mat-card-header> -->
+  <!-- <img
           src="../../assets/computer-line.svg"
           alt="computer icon"
           class="main2-icon"
         /> -->
 
-    <mat-card-content
+  <!-- <mat-card-content
       class="main2-card__content"
       fxLayout="column"
       fxLayoutGap="1rem"
@@ -40,14 +44,14 @@
       ></iframe>
 
       <div>Guests:&nbsp;{{ episode.guests }}</div>
-      <a href="{{ episode.soundCloud }}">Listen on Sound cloud</a>
-      <!-- <iframe
+      <a href="{{ episode.soundCloud }}">Listen on Sound cloud</a> -->
+  <!-- <iframe
         width="320"
         height="440"
         [src]="episode.instagram"
         frameborder="0"
       ></iframe> -->
-      <button
+  <!-- <button
         class="submit-button"
         color="warn"
         mat-raised-button
@@ -56,7 +60,7 @@
         delete
       </button>
     </mat-card-content>
-  </mat-card>
+  </mat-card> -->
 
   <!-- <mat-card
     class="main2-card"
