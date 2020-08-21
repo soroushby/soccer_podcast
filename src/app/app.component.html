@@ -30,10 +30,20 @@
         class="matlist"
         >Load Episode</mat-list-item
       >
-      <mat-list-item (click)="auth.login()" *ngIf="!auth.loggedIn"
+      <mat-list-item
+        role="listitem"
+        class="matlist"
+        fxLayoutAlign="center center"
+        (click)="auth.login()"
+        *ngIf="!auth.loggedIn"
         >Log In</mat-list-item
       >
-      <mat-list-item (click)="auth.logout()" *ngIf="auth.loggedIn"
+      <mat-list-item
+        role="listitem"
+        class="matlist"
+        fxLayoutAlign="center center"
+        (click)="auth.logout()"
+        *ngIf="auth.loggedIn"
         >Log Out</mat-list-item
       >
     </mat-nav-list>
@@ -65,8 +75,26 @@
             >
           </li>
 
-          <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
-          <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+          <mat-list-item (click)="auth.login()" *ngIf="!auth.loggedIn"
+            >Log In</mat-list-item
+          >
+          <mat-list-item (click)="auth.logout()" *ngIf="auth.loggedIn"
+            >Log Out</mat-list-item
+          >
+          <!-- <li
+            class="nav-list__item"
+            (click)="auth.login()"
+            *ngIf="!auth.loggedIn"
+          >
+            Log In
+          </li>
+          <li
+            class="nav-list__item"
+            (click)="auth.logout()"
+            *ngIf="auth.loggedIn"
+          >
+            Log Out
+          </li> -->
         </ul>
       </div>
     </mat-toolbar>
