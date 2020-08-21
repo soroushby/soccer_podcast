@@ -30,6 +30,12 @@
         class="matlist"
         >Load Episode</mat-list-item
       >
+      <mat-list-item (click)="auth.login()" *ngIf="!auth.loggedIn"
+        >Log In</mat-list-item
+      >
+      <mat-list-item (click)="auth.logout()" *ngIf="auth.loggedIn"
+        >Log Out</mat-list-item
+      >
     </mat-nav-list>
   </mat-sidenav>
 
@@ -58,6 +64,9 @@
               >Load Episodes</a
             >
           </li>
+
+          <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+          <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
         </ul>
       </div>
     </mat-toolbar>
