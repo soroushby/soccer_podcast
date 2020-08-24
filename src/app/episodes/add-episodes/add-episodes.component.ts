@@ -1,7 +1,7 @@
 import { DataService } from './../../services/data.service';
 import { Episodes } from './../../interfaces/episodes';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-episodes',
@@ -13,13 +13,13 @@ export class AddEpisodesComponent implements OnInit {
   episodeForm: any;
   ngOnInit(): void {
     this.episodeForm = this.fb.group({
-      name: [''],
-      date: [''],
-      topic: [''],
+      name: ['', Validators.required],
+      date: ['', Validators.required],
+      topic: ['', Validators.required],
       duration: [''],
-      guests: [''],
-      soundCloud: [''],
-      instagram: [''],
+      guests: ['', Validators.required],
+      soundCloud: ['', Validators.required],
+      instagram: ['', Validators.required],
     });
   }
 

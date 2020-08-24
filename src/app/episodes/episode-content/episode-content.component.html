@@ -19,21 +19,23 @@
     fxLayout="column"
     fxLayoutGap="1rem"
   >
+    <!-- [src]="sendUrl('https://www.instagram.com/tv/CEBR7j2BVVF/embed')" -->
     <iframe
       width="320"
       height="440"
-      src="https://www.instagram.com/tv/CEBR7j2BVVF/embed"
+      [src]="sendUrl(episode.instagram + 'embed')"
       frameborder="0"
     ></iframe>
 
-    <div>Guests:&nbsp;{{ episode.guests }}</div>
-    <a href="{{ episode.soundCloud }}">Listen on Sound cloud</a>
     <!-- <iframe
         width="320"
         height="440"
         [src]="episode.instagram"
         frameborder="0"
       ></iframe> -->
+    <div>Guests:&nbsp;{{ episode.guests }}</div>
+    <a href="{{ episode.soundCloud }}">Listen on Sound cloud</a>
+
     <button
       class="submit-button"
       color="warn"

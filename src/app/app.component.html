@@ -4,6 +4,7 @@
       role="list"
       fxLayoutAlign="center center"
       fxLayout="column"
+      fxLayoutGap="2rem"
       fxLayoutAlign="center end"
     >
       <mat-list-item
@@ -12,8 +13,8 @@
         routerLink="/welcome"
         (click)="sidenav.close()"
         class="matlist"
-        >Home</mat-list-item
-      >
+        >Home
+      </mat-list-item>
       <mat-list-item
         role="listitem"
         fxLayoutAlign="center center"
@@ -28,7 +29,7 @@
         routerLink="episodes/loadepisodes"
         (click)="sidenav.close()"
         class="matlist"
-        >Load Episode</mat-list-item
+        >Episode</mat-list-item
       >
       <mat-list-item
         role="listitem"
@@ -36,6 +37,8 @@
         fxLayoutAlign="center center"
         (click)="auth.login()"
         *ngIf="!auth.loggedIn"
+        fxFlexAlign="end"
+        fxFill
         >Log In</mat-list-item
       >
       <mat-list-item
@@ -60,27 +63,58 @@
         <mat-icon>menu</mat-icon>
       </button>
       <div class="nav" fxHide.lt-md>
-        <ul class="nav-list" fxLayout="row" fxLayoutGap="2rem">
+        <ul class="nav-list" fxLayout="row" fxLayoutGap="3rem">
           <li class="nav-list__item">
-            <a routerLink="Home" routerLinkActive="active">Home</a>
-          </li>
-          <li class="nav-list__item">
-            <a routerLink="episodes/addepisodes" routerLinkActive="active"
-              >Add Episode</a
+            <a
+              routerLink="Home"
+              routerLinkActive="active"
+              fxLayoutAlign="center center"
+              >Home<mat-icon class="nav-list__item-icon">home</mat-icon></a
             >
           </li>
           <li class="nav-list__item">
-            <a routerLink="episodes/loadepisodes" routerLinkActive="active"
-              >Load Episodes</a
+            <a
+              routerLink="episodes/addepisodes"
+              routerLinkActive="active"
+              fxLayoutAlign="center center"
+              >Add Episode<mat-icon class="nav-list__item-icon"
+                >queue</mat-icon
+              ></a
+            >
+          </li>
+          <li class="nav-list__item">
+            <a
+              routerLink="episodes/loadepisodes"
+              routerLinkActive="active"
+              fxLayoutAlign="center center"
+              >Episodes
+              <mat-icon class="nav-list__item-icon">ondemand_video</mat-icon></a
             >
           </li>
 
-          <mat-list-item (click)="auth.login()" *ngIf="!auth.loggedIn"
-            >Log In</mat-list-item
-          >
-          <mat-list-item (click)="auth.logout()" *ngIf="auth.loggedIn"
+          <li class="nav-list__item" *ngIf="!auth.loggedIn">
+            <a class="auth" (click)="auth.login()" fxLayoutAlign="center center"
+              >Log In<mat-icon class="nav-list__item-icon">login</mat-icon>
+            </a>
+          </li>
+
+          <li lass="nav-list__item" *ngIf="auth.loggedIn">
+            <a
+              class="auth"
+              (click)="auth.logout()"
+              fxLayoutAlign="center center"
+              >Log Out<mat-icon class="nav-list__item-icon"
+                >exit_to_app</mat-icon
+              >
+            </a>
+          </li>
+
+          <!-- <mat-list-item
+            class="auth"
+            (click)="auth.logout()"
+            *ngIf="auth.loggedIn"
             >Log Out</mat-list-item
-          >
+          > -->
           <!-- <li
             class="nav-list__item"
             (click)="auth.login()"

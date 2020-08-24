@@ -9,6 +9,8 @@ mat-sidenav-content {
     &__item {
       list-style: none;
       font-size: 2rem;
+      list-style: none;
+
       a {
         color: white;
         text-decoration: none;
@@ -16,6 +18,9 @@ mat-sidenav-content {
 
       a:hover {
         color: rgba(46, 235, 46, 0.938);
+      }
+      &-icon {
+        margin-left: 0.5rem;
       }
     }
   }
@@ -38,4 +43,10 @@ mat-sidenav-content {
 
 .matlist {
   color: white;
+}
+
+.auth {
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
