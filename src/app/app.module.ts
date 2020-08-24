@@ -10,9 +10,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent],
+  declarations: [AppComponent, WelcomeComponent, ProfileComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
