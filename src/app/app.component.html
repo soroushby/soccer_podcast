@@ -62,7 +62,7 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <div class="nav" fxHide.lt-md>
+      <div class="nav" fxHide.lt-md fxFlex>
         <ul class="nav-list" fxLayout="row" fxLayoutGap="3rem">
           <li class="nav-list__item">
             <a
@@ -108,14 +108,23 @@
               >
             </a>
           </li>
-
-          <!-- <mat-list-item
+          <!-- <li class="nav-list__item" *ngIf="auth.loggedIn">
+            <a routerLink="profile">Profile</a>
+          </li> -->
+        </ul>
+      </div>
+      <app-profile fxHide.lt-md></app-profile>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <mat-list-item
             class="auth"
             (click)="auth.logout()"
             *ngIf="auth.loggedIn"
             >Log Out</mat-list-item
           > -->
-          <!-- <li
+<!-- <li
             class="nav-list__item"
             (click)="auth.login()"
             *ngIf="!auth.loggedIn"
@@ -129,9 +138,3 @@
           >
             Log Out
           </li> -->
-        </ul>
-      </div>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>

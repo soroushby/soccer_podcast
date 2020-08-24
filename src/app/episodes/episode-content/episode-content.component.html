@@ -1,5 +1,6 @@
 <mat-card
   class="main2-card"
+  ngClass.lt-md="main2-card__res"
   fxLayoutAlign="start center"
   fxLayout="column"
   fxLayoutGap="1rem"
@@ -23,12 +24,21 @@
   >
     <!-- [src]="sendUrl('https://www.instagram.com/tv/CEBR7j2BVVF/embed')" -->
     <iframe
+      fxHide.lt-md
+      width="380"
+      height="500"
+      [src]="sendUrl(episode.instagram + 'embed')"
+      frameborder="0"
+    ></iframe>
+
+    <iframe
+      fxHide.gt-md
+      fxHide.md
       width="320"
       height="440"
       [src]="sendUrl(episode.instagram + 'embed')"
       frameborder="0"
     ></iframe>
-
     <!-- <iframe
         width="320"
         height="440"
