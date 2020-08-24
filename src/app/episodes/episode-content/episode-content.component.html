@@ -47,14 +47,16 @@
       ></iframe> -->
     <div>Guests:&nbsp;{{ episode.guests }}</div>
     <a href="{{ episode.soundCloud }}">Listen on Sound cloud</a>
-
-    <button
-      class="submit-button"
-      color="warn"
-      mat-raised-button
-      (click)="onDeleteEpisodes(episode.id)"
-    >
-      delete
-    </button>
+    <ng-container *ngIf="auth.userProfile$ | async as profile">
+      <button
+        *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
+        class="submit-button"
+        color="warn"
+        mat-raised-button
+        (click)="onDeleteEpisodes(episode.id)"
+      >
+        delete
+      </button>
+    </ng-container>
   </mat-card-content>
 </mat-card>

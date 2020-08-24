@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Episodes } from 'src/app/interfaces/episodes';
 import { DataService } from 'src/app/services/data.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-episode-content',
@@ -12,7 +13,8 @@ export class EpisodeContentComponent implements OnInit {
   @Input() episode: Episodes;
   constructor(
     private dataService: DataService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    public auth: AuthService
   ) {}
 
   ngOnInit(): void {

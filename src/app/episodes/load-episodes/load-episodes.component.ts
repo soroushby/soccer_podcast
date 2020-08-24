@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { Episodes } from 'src/app/interfaces/episodes';
 import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-load-episodes',
