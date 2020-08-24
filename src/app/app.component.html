@@ -15,13 +15,16 @@
         class="matlist"
         >Home
       </mat-list-item>
-      <mat-list-item
-        role="listitem"
-        fxLayoutAlign="center center"
-        routerLink="episodes/addepisodes"
-        (click)="sidenav.close()"
-        class="matlist"
-        >Add Episode</mat-list-item
+      <ng-container *ngIf="auth.userProfile$ | async as profile">
+        <mat-list-item
+          role="listitem"
+          fxLayoutAlign="center center"
+          *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
+          routerLink="episodes/addepisodes"
+          (click)="sidenav.close()"
+          class="matlist"
+          >Add Episode</mat-list-item
+        ></ng-container
       >
       <mat-list-item
         role="listitem"
@@ -119,7 +122,11 @@
           </li> -->
         </ul>
       </div>
+
       <app-profile></app-profile>
+      <a routerLink="/welcome" fxLayoutAlign="center center"
+        ><img class="logo" src="../assets/Untitled.png" />
+      </a>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

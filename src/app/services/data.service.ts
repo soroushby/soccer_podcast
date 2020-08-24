@@ -25,7 +25,7 @@ export class DataService {
 
   getEpisodes(): Observable<Episodes[]> {
     return this.db
-      .collection('episodes')
+      .collection('episodes', (data) => data.orderBy('date', 'desc'))
       .snapshotChanges()
       .pipe(
         map((data) =>
